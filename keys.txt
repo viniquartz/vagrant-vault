@@ -1,0 +1,17 @@
+Unseal Key 1: TT08LWfhaPQHnyK2B4PdtkDKqhH8HPHUD537oQwUuVrr
+Unseal Key 2: 5i3BPfr+4nzREzZCLfChnuJxqjqR/REktqHo+s62uj36
+Unseal Key 3: y/bq6p0T6H9BLB1hUZDQgiptjHws5+FpoHWfKCM+Dl5p
+Unseal Key 4: efyIz2bOqHKwwxz1crqtd52HN4GwTs22Sit9C5bLuJc1
+Unseal Key 5: r4qq+hlzf8gcnpJLVPqiq+COgTUwfT2yeGmEwiGCsciW
+
+Initial Root Token: s.Gn4a2o3YklB27izWWDPuKusy
+
+Key                  Value
+---                  -----
+token                s.Gn4a2o3YklB27izWWDPuKusy
+token_accessor       myWDa17JXLQrt26BySGdTq4M
+token_duration       ∞
+token_renewable      false
+token_policies       ["root"]
+identity_policies    []
+policies             ["root"]
