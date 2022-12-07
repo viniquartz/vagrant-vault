@@ -3,7 +3,7 @@
 
 echo "================== UPGRADE SYSTEM ===================";
 sudo su - 
-sudo apt update && apt install unzip -y
+apt update && apt install unzip -y
 
 echo "================== DOWNLOAD ===================";
 curl https://releases.hashicorp.com/vault/1.4.0/vault_1.4.0_linux_amd64.zip -o vault.zip

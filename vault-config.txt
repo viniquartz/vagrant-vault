@@ -1,0 +1,22 @@
+#!/bin/bash
+podman run --name vault -p 8200:8200 vault:1.7.3
+podman exec -it vault /bin/sh
+# export VAULT_ADDR='http://"vault.vinicius.example":8200'
+export VAULT_ADDR='http://0.0.0.0:8200'
+export VAULT_TOKEN='s.bEYuf09mcksZ3RBiHvznaWr4'
+
+
+# Enable KV v2 secret engine for the app
+vault auth enable approle
+vault secrets enable kv-v2
+vault policy write my-policy my-policy.hcl
+vault write auth/approle/role/node-app-role token_ttl=1h token_max_ttl=4h token_policies=my-policy
+vault read auth/approle/role/node-app-role/role-id
+vault write -f auth/approle/role/node-app-role/secret-id
+vault kv put service_accounts/sa_rotation db_name="users" username="admin" password="passw0rd"
+
+# chmod +x vault-agent.sh
+# source vault-agent.sh
+
+export ROLE_ID=0d9a3f3f-d1e7-bf71-4055-7514b012e4d5
+export SECRET_ID=d0e0ab82-2bea-c917-cdf3-13c9bcb7d767
